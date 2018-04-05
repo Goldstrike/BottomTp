@@ -12,8 +12,16 @@ namespace BottomTp
 		{
 			InitializeComponent();
 
+            Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.MaterialModule())
+                                  .With(new Plugin.Iconize.Fonts.FontAwesomeModule());
 
-            MainPage = new MainPage();
+
+            // default
+            //MainPage = new MainPage();
+
+            // iconize
+            MainPage = new IcMainPage();
+
         }
 
 		protected override void OnStart ()

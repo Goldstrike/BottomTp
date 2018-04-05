@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<iconize:IconTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:views="clr-namespace:BottomTp.Views"
+                        xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+                        x:Class="BottomTp.Views.IcMainPage">
+    <TabbedPage.Children>
+        <iconize:IconNavigationPage Title="Browse"
+                                    Icon="md-view-list">
+            <x:Arguments>
+                <views:ItemsPage />
+            </x:Arguments>
+        </iconize:IconNavigationPage>
+        <iconize:IconNavigationPage Title="About"
+                                    Icon="md-help">
+            <x:Arguments>
+                <views:AboutPage />
+            </x:Arguments>
+        </iconize:IconNavigationPage>
+    </TabbedPage.Children>
+</iconize:IconTabbedPage>

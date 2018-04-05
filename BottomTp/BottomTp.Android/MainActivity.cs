@@ -19,6 +19,9 @@ namespace BottomTp.Droid
 
             base.OnCreate(bundle);
 
+            // Iconize
+            Plugin.Iconize.Iconize.Init(Resource.Id.toolbar, Resource.Id.sliding_tabs);
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
