@@ -45,6 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Naxam.BottomTabbedPage">
+      <Version>0.2.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Xam.Plugin.Iconize">
       <Version>2.0.0.37-beta</Version>
     </PackageReference>
@@ -94,6 +97,9 @@
       <Project>{912923C6-FEB3-4E0F-815E-17F1CB3C58B2}</Project>
       <Name>BottomTp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bnv_selector.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

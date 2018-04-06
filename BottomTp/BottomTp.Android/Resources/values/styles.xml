@@ -27,4 +27,8 @@
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">#FF4081</item>
   </style>
+
+  <!-- Naxam -->
+  <drawable name="background">#00ffffff</drawable>
+  <drawable name="selected">#0Dffffff</drawable>
 </resources>

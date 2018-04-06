@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<naxam:BottomTabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                        xmlns:views="clr-namespace:BottomTp.Views"
+                        xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
+                        xmlns:naxam="clr-namespace:Naxam.Controls.Forms;assembly=Naxam.Controls.Forms"
+                        x:Class="BottomTp.Views.NaxamMainPage">
+    <views:ItemsPage Title="Browse" Icon="md-view-list"  />
+    <views:AboutPage Title="About" Icon="md-help"/>
+</naxam:BottomTabbedPage>    

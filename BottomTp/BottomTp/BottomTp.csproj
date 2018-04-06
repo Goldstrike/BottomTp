@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Naxam.BottomTabbedPage" Version="0.2.0.2" />
     <PackageReference Include="Xam.Plugin.Iconize" Version="2.0.0.37-beta" />
     <PackageReference Include="Xam.Plugin.Iconize.FontAwesome" Version="2.0.0.37-beta" />
     <PackageReference Include="Xam.Plugin.Iconize.Material" Version="2.0.0.37-beta" />
@@ -14,6 +15,9 @@
   <ItemGroup>
     <Compile Update="Views\AboutPage.xaml.cs">
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\NaxamMainPage.xaml.cs">
+      <DependentUpon>NaxamMainPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ItemDetailPage.xaml.cs">
       <SubType>Code</SubType>
