@@ -9,6 +9,7 @@ using Android.OS;
 using Naxam.Controls.Platform.Droid;
 using Android.Graphics;
 using Plugin.Iconize;
+using FFImageLoading.Forms.Droid;
 
 namespace BottomTp.Droid
 {
@@ -20,13 +21,14 @@ namespace BottomTp.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-            // Naxam
-            
+            // Naxam            
             SetupBottomTabs();
             Plugin.Iconize.Iconize
                 .With(new Plugin.Iconize.Fonts.FontAwesomeModule())
                 .With(new Plugin.Iconize.Fonts.MaterialModule());
-            
+
+            // FFImageLoading
+            CachedImageRenderer.Init(enableFastRenderer: false);
 
             base.OnCreate(bundle);
 
@@ -80,6 +82,7 @@ namespace BottomTp.Droid
                 menuItem.SetIcon(drawable);
             };
         }
+
     }
 }
 

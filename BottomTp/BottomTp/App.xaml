@@ -27,7 +27,43 @@
                 <Setter Property="BarBackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="BarTextColor" Value="White" />
             </Style>
+
             
+            <!-- Clean -->
+            <!--
+            <Style TargetType="Label" x:Key="FALabel">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.iOS>FontAwesome</OnPlatform.iOS>
+                            <OnPlatform.Android>fontawesome.ttf#FontAwesome</OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.iOS>HelveticaNeue</OnPlatform.iOS>
+                            <OnPlatform.Android>Roboto-Regular.ttf#Roboto</OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="Label" x:Key="BoldLabel">
+                <Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <OnPlatform.iOS>HelveticaNeue-Bold</OnPlatform.iOS>
+                            <OnPlatform.Android>Roboto-Bold.ttf#Roboto Bold</OnPlatform.Android>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            -->
         </ResourceDictionary>
     </Application.Resources>
 </Application>

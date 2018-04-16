@@ -11,6 +11,7 @@
                 <views:ItemsPage />
             </x:Arguments>
         </iconize:IconNavigationPage>
+        
         <iconize:IconNavigationPage Title="About"
                                     Icon="md-help">
             <x:Arguments>

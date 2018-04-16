@@ -7,12 +7,14 @@ using Xamarin.Forms;
 
 using BottomTp.Models;
 using BottomTp.Views;
+using System.Linq;
 
 namespace BottomTp.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {
         public ObservableCollection<Item> Items { get; set; }
+        public ObservableCollection<Item> ItemsDesc { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         public ItemsViewModel()
@@ -44,6 +46,7 @@ namespace BottomTp.ViewModels
                 {
                     Items.Add(item);
                 }
+                ItemsDesc = new ObservableCollection<Item>(Items.Reverse());
             }
             catch (Exception ex)
             {

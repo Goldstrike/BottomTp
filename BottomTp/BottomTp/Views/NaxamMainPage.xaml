@@ -5,6 +5,20 @@
                         xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
                         xmlns:naxam="clr-namespace:Naxam.Controls.Forms;assembly=Naxam.Controls.Forms"
                         x:Class="BottomTp.Views.NaxamMainPage">
+    <TabbedPage.Children>
+        <NavigationPage Title="Browse" Icon="md-view-list">
+            <x:Arguments>
+                <views:SfItemsPage   />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage Title="About" Icon="md-help">
+            <x:Arguments>
+                <views:AboutPage />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+    <!--
     <views:ItemsPage Title="Browse" Icon="md-view-list"  />
     <views:AboutPage Title="About" Icon="md-help"/>
+    -->
 </naxam:BottomTabbedPage>    

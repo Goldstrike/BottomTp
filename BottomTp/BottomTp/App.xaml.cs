@@ -17,6 +17,9 @@ namespace BottomTp
                                   .With(new Plugin.Iconize.Fonts.FontAwesomeModule());
 
 
+            // Without MasterDetail
+            // ====================
+
             // default
             // -------
             //MainPage = new MainPage();
@@ -70,7 +73,16 @@ namespace BottomTp
             */
 
             // Naxam - default XAML
-            MainPage = new NaxamMainPage();
+            //MainPage = new NaxamMainPage();
+
+            // with Master-Detail
+            // ==================
+
+            // Naxam
+            var masterDetail = new MasterDetailPage();
+            masterDetail.Master = new MenuPage();
+            masterDetail.Detail = new NaxamMainPage();
+            MainPage = masterDetail;
         }
 
 		protected override void OnStart ()
