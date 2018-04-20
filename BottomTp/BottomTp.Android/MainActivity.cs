@@ -21,19 +21,42 @@ namespace BottomTp.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
-            // Naxam            
+            // Naxam    
+            // =====
             SetupBottomTabs();
             Plugin.Iconize.Iconize
                 .With(new Plugin.Iconize.Fonts.FontAwesomeModule())
                 .With(new Plugin.Iconize.Fonts.MaterialModule());
 
             // FFImageLoading
+            // ==============
             CachedImageRenderer.Init(enableFastRenderer: false);
+             
 
             base.OnCreate(bundle);
 
             // Iconize
+            // =======
             //Plugin.Iconize.Iconize.Init(Resource.Id.toolbar, Resource.Id.sliding_tabs);
+
+            // Disable hamburger => arrow animation
+            // ====================================
+            //Toolbar toolbar = (Toolbar)Resource.Layout.Toolbar;
+            //ActionBarDrawerToggle
+            //toolbar.Set
+            /*
+            var myToolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            if (myToolbar != null)
+            {
+
+                // set this flag so the colors colorPrimaryDark and android:statusBarColor have an effect
+                // setting android:statusBarColor to transparent causes the drawer to be dran underneath a translucent status bar
+                Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
+
+                // make the toolbar the replacement of the action bar
+                //SetSupportActionBar(myToolbar);
+            }
+            */
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
@@ -49,11 +72,14 @@ namespace BottomTp.Droid
                 }
                 },
                 new int[] {
-                    Color.Red, //Selected
-                    Color.White //Normal
+                    //Color.Red, //Selected
+                    //Color.White //Normal
+                    Color.White, //Selected
+                    Color.LightGray //Normal
 	            });
 
-            BottomTabbedRenderer.BackgroundColor = new Color(0x9C, 0x27, 0xB0);
+            //BottomTabbedRenderer.BackgroundColor = new Color(0x9C, 0x27, 0xB0);
+            BottomTabbedRenderer.BackgroundColor = new Color(0x21, 0x96, 0xF3);
             //BottomTabbedRenderer.FontSize = 12f;
             BottomTabbedRenderer.FontSize = 14f;
             BottomTabbedRenderer.IconSize = 16;
@@ -77,12 +103,16 @@ namespace BottomTp.Droid
                     return;
                 }
 
-                var drawable = new IconDrawable(this, iconized).Color(selected ? Color.Red : Color.White).SizeDp(30);
+                //var drawable = new IconDrawable(this, iconized).Color(selected ? Color.Red : Color.White).SizeDp(30);
+                var drawable = new IconDrawable(this, iconized).Color(selected ? Color.White : Color.LightGray).SizeDp(30);
 
                 menuItem.SetIcon(drawable);
             };
         }
 
+
+
     }
+
 }
 

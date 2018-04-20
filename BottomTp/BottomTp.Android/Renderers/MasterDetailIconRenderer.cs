@@ -16,15 +16,15 @@ using Xamarin.Forms.Platform.Android.AppCompat;
 
 
 // From KickassUI.Twitter
-[assembly: ExportRenderer(typeof(MasterDetailPage), typeof(MasterDetailIconRenderer))]
-//[assembly: ExportRenderer(typeof(BottomTp.Views.NaxamMainPage), typeof(MasterDetailIconRenderer))]
+//[assembly: ExportRenderer(typeof(MasterDetailPage), typeof(MasterDetailIconRenderer))]
+////[assembly: ExportRenderer(typeof(BottomTp.Views.NaxamMainPage), typeof(MasterDetailIconRenderer))]
 namespace BottomTp.Droid.Renderers
 {
 
     public class MasterDetailIconRenderer : MasterDetailPageRenderer
     {
 
-        
+        /*
         protected override void OnLayout(bool changed, int l, int t, int r, int b)
         {
             base.OnLayout(changed, l, t, r, b);
@@ -33,6 +33,14 @@ namespace BottomTp.Droid.Renderers
 
         private void SetNavigationIcon(Context context, int resourceId)
         {
+            bool displayBack = false;
+            var app = Xamarin.Forms.Application.Current;
+            var navPage = ((app.MainPage.Navigation.ModalStack[0] as MasterDetailPage).Detail as NavigationPage);
+            if (app != null && navPage.Navigation.NavigationStack.Count > 0)
+            {
+                displayBack = true;
+            }
+
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.toolbar);
             if (toolbar.NavigationIcon != null)
             {
@@ -40,7 +48,7 @@ namespace BottomTp.Droid.Renderers
                 navIcon?.SetImageDrawable(context.GetDrawable(resourceId));
             }
         }
-        
+        */
 
 
     }
