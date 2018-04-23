@@ -4,18 +4,20 @@
                         xmlns:views="clr-namespace:BottomTp.Views"
                         xmlns:iconize="clr-namespace:Plugin.Iconize;assembly=Plugin.Iconize"
                         xmlns:naxam="clr-namespace:Naxam.Controls.Forms;assembly=Naxam.Controls.Forms"
+                        xmlns:controls="clr-namespace:BottomTp.Controls;assembly=BottomTp"
+                        Icon="icon.png"
                         x:Class="BottomTp.Views.NaxamMainPage">
     <TabbedPage.Children>
-        <NavigationPage Title="Browse" Icon="md-view-list">
+        <controls:CustomNavigationPage Title="Browse" Icon="md-view-list">
             <x:Arguments>
                 <views:SfItemsPage   />
             </x:Arguments>
-        </NavigationPage>
-        <NavigationPage Title="About" Icon="md-help">
+        </controls:CustomNavigationPage>
+        <controls:CustomNavigationPage Title="About" Icon="md-help">
             <x:Arguments>
                 <views:AboutPage />
             </x:Arguments>
-        </NavigationPage>
+        </controls:CustomNavigationPage>
     </TabbedPage.Children>
     <!--
     <views:ItemsPage Title="Browse" Icon="md-view-list"  />

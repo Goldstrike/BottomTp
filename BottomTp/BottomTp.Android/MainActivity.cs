@@ -11,6 +11,9 @@ using Android.Graphics;
 using Plugin.Iconize;
 using FFImageLoading.Forms.Droid;
 
+
+using Toolbar = Android.Support.V7.Widget.Toolbar;
+
 namespace BottomTp.Droid
 {
     [Activity(Label = "BottomTp", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -42,6 +45,13 @@ namespace BottomTp.Droid
             // Disable hamburger => arrow animation
             // ====================================
             //Toolbar toolbar = (Toolbar)Resource.Layout.Toolbar;
+            Toolbar toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            if (toolbar != null)
+            {
+                SetSupportActionBar(toolbar);
+                SupportActionBar.SetDisplayHomeAsUpEnabled(false);
+            }
+
             //ActionBarDrawerToggle
             //toolbar.Set
             /*

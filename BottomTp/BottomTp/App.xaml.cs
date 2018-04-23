@@ -82,6 +82,7 @@ namespace BottomTp
             var masterDetail = new MasterDetailPage();
             masterDetail.Master = new MenuPage();
             masterDetail.Detail = new NaxamMainPage();
+            masterDetail.Icon = "icon.png";
             MainPage = masterDetail;
         }
 
